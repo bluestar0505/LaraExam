@@ -1,0 +1,14 @@
+The first thing is this scroll arrow(there is also an upwards scrolling arrow with the same changes required).
+When you press it, it scrolls down only a little bit, and also once you press it once. you have to hover around a bit to be able to click it again.
+Furthermore, when you reach the end of the list, the arrow takes a second or 2 to actually disappear, but we would like for it to disappear immediately after reaching the bottom of the list.
+Finally we would like for the cursor to become a hand instead of a click while hovering over the arrow so that the user understands they can press the arrow.
+As far as the small increments in scrolling when clicking the button, we haven't decided the best way to scroll so we can leave this open to discussion.
+
+Next this is the list that the scroller relates to.
+The list is contained in a box of constant dimensions, but the list itself is expandable, so when you expand the bottom element of a list (like in the screenshot below), the expanded elements disappear off the screen.
+Again we are open to discussion on how to better implement the list but right now our idea is that the list snaps so that you never see half a list element i.e. you always see all of the element or none of it.
+
+Here we have horizontal scrollers with similar problems to the vertical scrollers.
+We would like that the list snaps and that the scrollers didn't scroll in such small
+Finally we just have some buttons that aren't working properly at the moment, depending on the screen they are being viewed on.
+we would like to change the 'Report Issue' button to an icon of a flag also.

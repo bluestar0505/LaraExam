@@ -1,0 +1,345 @@
+$color-pale : #3097d1;
+$color-white : #fff;
+$color-black: #000;
+
+$color-error : #a94442;
+
+$nav-height: 80px;
+
+$footer-height: 40px;
+
+@font-face {
+  font-family: ColoredCrayons;
+  src: url(../fonts/ColoredCrayons.ttf);
+}
+
+html,
+body {
+  margin:0;
+  padding:0;
+  height:100%;
+}
+
+
+body{
+  font-family: sans-serif;
+  background: $color-white;
+}
+
+#wrapper {
+  min-height:100%;
+  position:relative;
+}
+
+.content{
+  padding-bottom: $footer-height;
+}
+
+.footer{
+  font-size: 14px;
+  background: $color-pale;
+  color: $color-white;
+
+  line-height: $footer-height;
+  height: $footer-height;
+  width:100%;
+  
+  bottom:0;
+  left:0;
+}
+
+.btn-pale{
+  background: $color-pale;
+  color: $color-white;
+  &:hover, &:focus{
+    color: $color-black;
+  }
+}
+
+.front-image{
+  //background: url(../images/front-image1.jpg) no-repeat;
+  background: url(../images/front-image2.png) no-repeat;
+  background-size: 100% 350px;
+  width: 100%;
+  height: 350px;
+  min-height: 100px;
+  position: relative;
+  margin-top: 60px;
+  box-shadow: 25px 25px 50px 0 white inset, -25px -25px 50px 0 white inset;
+}
+
+.navbar-pale-blue{
+
+  background: $color-pale;
+  color: $color-white;
+
+  a{
+    color: $color-white;
+  }
+
+  .navbar-toggle{
+    .icon-bar{
+      background: $color-white;
+    }
+  }
+
+  .navbar-nav > li > a:hover,
+  .navbar-nav > li > a:focus{
+    background: $color-pale;
+    color: $color-white;
+  }
+
+  .navbar-header {
+    .navbar-brand {
+      font-family: ColoredCrayons;
+      color: $color-white;
+      font-size: 40px;
+      height: $nav-height;
+      line-height: $nav-height;
+    }
+  }
+
+  &.nav-logged{
+    .navbar-header {
+      .navbar-brand {
+        height: auto;
+        line-height: 1em;
+      }
+    }
+    .navbar-right{
+      margin-top: 10px;
+    }
+  }
+
+
+  .nav .open > a, .nav .open > a:hover, .nav .open > a:focus{
+    background: $color-pale;
+    border-color: $color-black;
+  }
+
+
+  .dropdown-menu{
+    background: $color-pale;
+    color: $color-white;
+    li{
+      a {
+        background: transparent;
+        color: $color-white;
+        &:hover, &:focus {
+          background: transparent;
+          color: black;
+        }
+      }
+    }
+  }
+
+
+
+  .navbar-right{
+
+
+
+
+    .form-login {
+
+      margin-top: 20px;
+      font-size: 12px;
+
+
+
+      li{
+        float: left;
+        display: block;
+        position: relative;
+       &.margin{
+          margin-right: 20px;
+        }
+      }
+      .form-group {
+        display: inline-block;
+
+        &.error-login{
+          input {
+            outline: 1px solid $color-error;
+            box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+          }
+        }
+        .control-label{
+          text-align: left;
+        }
+        .form-control{
+          float: right;
+          display: inline-block;
+          min-width: 200px;
+        }
+
+        .form-button{
+          display: table-cell;
+          vertical-align: middle;
+          height: $nav-height;
+        }
+        .btn-login{
+          background: white;
+          color: $color-pale;
+          padding: 5px 15px;
+          margin: auto 0;
+
+          &:hover, &:focus{
+            background: white;
+            color: $color-pale;
+          }
+        }
+      }
+    }
+
+    .nav-search{
+      display: inline-block;
+      margin-top: 10px;
+
+      .form-group{
+        display: inline-block;
+        &.error-search{
+          outline: 1px solid $color-error;
+          box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+        }
+      }
+      #search{
+        font-size: 12px;
+        line-height: 1.2;
+        height: 28px;
+        min-width: 200px;
+      }
+      button{
+        display: inline-block;
+        font-size: 12px;
+        line-height: 1.2;
+        float: right;
+      }
+    }
+  }
+}
+
+
+.register2{
+  margin-top: 40px;
+  .panel-heading{
+    font-size: 32px;
+    text-align: left;
+  }
+}
+
+
+.panel-pale {
+  border-color: $color-pale;
+  .panel-heading {
+    background-color: $color-pale;
+    border-color: $color-pale;
+    color: $color-white;
+  }
+}
+
+
+@media(max-width: 1200px){
+
+}
+
+@media(max-width: 1050px){
+  .navbar-pale-blue .navbar-right .form-login .form-group .form-control{
+    min-width: inherit;
+  }
+  .navbar-pale-blue .navbar-right .form-login li.margin{
+    width: 165px;
+  }
+}
+
+@media(max-width: 992px){
+
+}
+
+@media(max-width: 768px){
+  .navbar-pale-blue .navbar-header .navbar-brand {
+    height: 70px;
+    line-height: 50px;
+  }
+  .navbar-toggle{
+    padding-top: 18px;
+  }
+  .navbar-nav{
+    margin: 10px auto;
+  }
+  .navbar-pale-blue .navbar-right .form-login li.margin{
+    width: inherit;
+  }
+
+  .navbar-pale-blue .navbar-right .nav-search{
+    width: 100%;
+  }
+  .navbar-form{
+    box-shadow: none;
+  }
+  .nav-dropdown{
+    width: 50%;
+    float: right;
+    .dropdown-toggle{
+      text-align: right;
+    }
+  }
+  .nav-dropdown{
+    width: 100%;
+    .dropdown-toggle{
+      text-align: left;
+      .caret{
+        display: none;
+      }
+    }
+  }
+  .dropdown-menu{
+    display: block;
+    position: relative;
+    width: 100%;
+    border: 0 none;
+    box-shadow: none;
+    li{
+      float: left;
+    }
+  }
+
+}
+@media(max-width: 600px){
+  .front-image{
+    height: 250px;
+    background-size: 100% 250px;
+  }
+  .navbar-pale-blue .navbar-right .form-login li{
+      display: block;
+      width: 100%;
+      margin: 5px auto;
+  }
+  .navbar-pale-blue .navbar-right .form-login li.margin{
+    width: 100%;
+  }
+  .navbar-pale-blue .navbar-right .form-login .form-group{
+    display: block;
+  }
+
+
+
+}
+
+@media(max-width: 480px){
+
+  .front-image{
+    height: 200px;
+    background-size: 100% 200px;
+  }
+  .navbar-pale-blue .navbar-right .form-login .form-group .form-control{
+    width: 100%;
+    float: inherit;
+  }
+  .navbar-pale-blue .navbar-right .form-login .form-group .form-button{
+    height: 40px;
+  }
+
+
+}
+
